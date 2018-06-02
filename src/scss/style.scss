@@ -1,0 +1,90 @@
+@keyframes blurred-bg {
+    0% {
+      -webkit-filter: blur(0px);
+    }
+    
+    100% {
+      -webkit-filter: blur(4px) brightness(30%);
+    }
+  }
+  
+  html,body { 
+    margin: 0;
+  }
+  
+  html {
+    background: #FFF;
+    font-family: Helvetica,Arial,sans-serif;
+  }
+  header {
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background: green;
+    overflow: hidden;
+    position: relative;
+    text-transform: uppercase;
+  }
+  
+  .background-img {
+    background-image: url('../img/bg-img.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    z-index: 1;
+  /*   -webkit-filter: blur(4px); */
+      -webkit-animation: blurred-bg 2s 1 forwards; 
+      box-sizing: border-box;
+  }
+  
+  header > *:not(.background-img) {
+    z-index: 5;
+    position: relative;
+  }
+  
+  .circle {
+    border-radius: 50%;
+    border: 4px solid #FFF;
+  }
+  
+  /*button {
+    border: 0;
+    padding: 10px 24px;
+    background: rgba(0,150,200,.6);
+    color: white;
+    font-size: 18px;
+    position: absolute !important;
+    right: 1rem;
+    bottom: 1rem;
+  }*/
+
+  form{
+      background-color: rgba(0,0,0,.5);
+      text-align: left;
+      color:white;
+      border: solid 1px #FFF;
+      border-radius: 5px;
+
+      animation-name: moveInLeft;
+    animation-duration: 1s;
+      
+  }
+
+
+  @keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+
+    }
+}
