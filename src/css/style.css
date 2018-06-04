@@ -18,7 +18,8 @@ header {
   background: green;
   overflow: hidden;
   position: relative;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  border-radius: 0 0 95% 95% / 4%; }
 
 .background-img {
   background-image: url("../img/bg-img.jpg");
